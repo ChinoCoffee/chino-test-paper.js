@@ -1,0 +1,44 @@
+ <!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="UTF-8">
+      <title>chino-test-paper.js</title>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.9.25/paper-full.min.js"></script>
+      <script type="text/javascript" src="lib/bezier.js"></script>
+      <script type="text/javascript" src="lib/spline.js"></script>
+      <script type="text/javascript" src="lib/geometry.js"></script>
+      <script type="text/javascript" src="lib/chino.js"></script>
+      <script type="text/javascript">
+        paper.install(window);
+        window.onload = function() {
+          var chino = new Character("Chino", {});
+
+          var canvas = document.getElementById('canvas');
+          paper.setup(canvas);
+
+          var r = Math.random(), path;
+          if (r > 0.70) {
+            path = 'chino-bezier-sad.svg';
+          } else if (r > 0.50) {
+            path = 'chino-bezier-eyes-shut.svg';
+          } else {
+            path = 'chino-bezier-peace.svg';
+          }
+          paper.project.importSVG('ref/'+ path, function(svg) {
+            chino.bind(svg);
+          });
+        }
+      </script>
+  </head>
+  <body>
+    <canvas id="canvas" width="600" height="800"></canvas>
+  </body>
+  <script>
+   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+   ga('create', 'UA-77422221-1', 'auto');
+   ga('send', 'pageview');
+  </script>
+</html>
