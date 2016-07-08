@@ -1,6 +1,6 @@
 ## chino-test-paper.js
 
-Rendering Chino (a character from [Is the order a rabbit?](http://www.gochiusa.com/)) SVG path with [Paper.js](http://paperjs.org/) and [Bezier.js](https://github.com/Pomax/bezierjs)
+Rendering Chino (a character in [Is the order a rabbit?](http://www.gochiusa.com/)) SVG path with [Paper.js](http://paperjs.org/) and [Bezier.js](https://github.com/Pomax/bezierjs)
 
 [Demo](http://www.chino.coffee/chino-test-paper.js/chino.html)
 
