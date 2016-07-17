@@ -17,12 +17,14 @@
           paper.setup(canvas);
 
           var r = Math.random(), path;
-          if (r > 0.70) {
+          if (r > 0.80) {
             path = 'chino-bezier-sad.svg';
-          } else if (r > 0.50) {
+          } else if (r > 0.70) {
             path = 'chino-bezier-eyes-shut.svg';
-          } else {
+          } else if (r > 0.20) {
             path = 'chino-bezier-peace.svg';
+          } else {
+            path = 'chino-bezier-angry.svg';
           }
           paper.project.importSVG('ref/'+ path, function(svg) {
             chino.bind(svg);
